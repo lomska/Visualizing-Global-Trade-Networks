@@ -1,0 +1,294 @@
+id,text
+all,All
+0,World
+4,Afghanistan
+472,"Africa CAMEU region, nes"
+8,Albania
+12,Algeria
+16,American Samoa
+20,Andorra
+24,Angola
+660,Anguilla
+10,Antarctica
+28,Antigua and Barbuda
+899,"Areas, nes"
+32,Argentina
+51,Armenia
+533,Aruba
+36,Australia
+40,Austria
+31,Azerbaijan
+44,Bahamas
+48,Bahrain
+50,Bangladesh
+52,Barbados
+112,Belarus
+56,Belgium
+58,Belgium-Luxembourg
+84,Belize
+204,Benin
+60,Bermuda
+64,Bhutan
+68,Bolivia (Plurinational State of)
+535,Bonaire
+70,Bosnia Herzegovina
+72,Botswana
+74,Bouvet Island
+80,Br. Antarctic Terr.
+86,Br. Indian Ocean Terr.
+92,Br. Virgin Isds
+76,Brazil
+96,Brunei Darussalam
+100,Bulgaria
+837,Bunkers
+854,Burkina Faso
+108,Burundi
+132,Cabo Verde
+471,"CACM, nes"
+116,Cambodia
+120,Cameroon
+124,Canada
+129,"Caribbean, nes"
+136,Cayman Isds
+140,Central African Rep.
+148,Chad
+152,Chile
+156,China
+344,"China, Hong Kong SAR"
+446,"China, Macao SAR"
+162,Christmas Isds
+166,Cocos Isds
+170,Colombia
+174,Comoros
+178,Congo
+184,Cook Isds
+188,Costa Rica
+384,Côte d'Ivoire
+191,Croatia
+192,Cuba
+531,Curaçao
+196,Cyprus
+203,Czechia
+200,Czechoslovakia
+408,Dem. People's Rep. of Korea
+180,Dem. Rep. of the Congo
+208,Denmark
+262,Djibouti
+212,Dominica
+214,Dominican Rep.
+588,East and West Pakistan
+221,"Eastern Europe, nes"
+218,Ecuador
+818,Egypt
+222,El Salvador
+226,Equatorial Guinea
+232,Eritrea
+233,Estonia
+231,Ethiopia
+697,"Europe EFTA, nes"
+492,"Europe EU, nes"
+234,Faeroe Isds
+238,Falkland Isds (Malvinas)
+242,Fiji
+246,Finland
+886,Fmr Arab Rep. of Yemen
+278,Fmr Dem. Rep. of Germany
+866,Fmr Dem. Rep. of Vietnam
+720,Fmr Dem. Yemen
+230,Fmr Ethiopia
+280,Fmr Fed. Rep. of Germany
+582,Fmr Pacific Isds
+590,"Fmr Panama, excl.Canal Zone"
+592,Fmr Panama-Canal-Zone
+868,Fmr Rep. of Vietnam
+717,Fmr Rhodesia Nyas
+736,Fmr Sudan
+835,Fmr Tanganyika
+810,Fmr USSR
+890,Fmr Yugoslavia
+836,Fmr Zanzibar and Pemba Isd
+260,Fr. South Antarctic Terr.
+251,France
+838,Free Zones
+254,French Guiana
+258,French Polynesia
+583,FS Micronesia
+266,Gabon
+270,Gambia
+268,Georgia
+276,Germany
+288,Ghana
+292,Gibraltar
+300,Greece
+304,Greenland
+308,Grenada
+312,Guadeloupe
+316,Guam
+320,Guatemala
+324,Guinea
+624,Guinea-Bissau
+328,Guyana
+332,Haiti
+334,Heard Island and McDonald Islands
+336,Holy See (Vatican City State)
+340,Honduras
+348,Hungary
+352,Iceland
+699,India
+356,India [...1974]
+360,Indonesia
+364,Iran
+368,Iraq
+372,Ireland
+376,Israel
+381,Italy
+388,Jamaica
+392,Japan
+400,Jordan
+398,Kazakhstan
+404,Kenya
+296,Kiribati
+414,Kuwait
+417,Kyrgyzstan
+473,"LAIA, nes"
+418,Lao People's Dem. Rep.
+428,Latvia
+422,Lebanon
+426,Lesotho
+430,Liberia
+434,Libya
+440,Lithuania
+442,Luxembourg
+450,Madagascar
+454,Malawi
+458,Malaysia
+462,Maldives
+466,Mali
+470,Malta
+584,Marshall Isds
+474,Martinique
+478,Mauritania
+480,Mauritius
+175,Mayotte
+484,Mexico
+496,Mongolia
+499,Montenegro
+500,Montserrat
+504,Morocco
+508,Mozambique
+104,Myanmar
+580,N. Mariana Isds
+516,Namibia
+520,Nauru
+524,Nepal
+530,Neth. Antilles
+532,Neth. Antilles and Aruba
+528,Netherlands
+536,Neutral Zone
+540,New Caledonia
+554,New Zealand
+558,Nicaragua
+562,Niger
+566,Nigeria
+570,Niue
+574,Norfolk Isds
+637,"North America and Central America, nes"
+290,"Northern Africa, nes"
+579,Norway
+527,"Oceania, nes"
+512,Oman
+577,"Other Africa, nes"
+490,"Other Asia, nes"
+568,"Other Europe, nes"
+586,Pakistan
+585,Palau
+591,Panama
+598,Papua New Guinea
+600,Paraguay
+459,Peninsula Malaysia
+604,Peru
+608,Philippines
+612,Pitcairn
+616,Poland
+620,Portugal
+634,Qatar
+410,Rep. of Korea
+498,Rep. of Moldova
+636,"Rest of America, nes"
+638,Réunion
+642,Romania
+643,Russian Federation
+646,Rwanda
+647,Ryukyu Isd
+461,Sabah
+652,Saint Barthelemy
+654,Saint Helena
+659,Saint Kitts and Nevis
+658,"Saint Kitts, Nevis and Anguilla"
+662,Saint Lucia
+534,Saint Maarten
+666,Saint Pierre and Miquelon
+670,Saint Vincent and the Grenadines
+882,Samoa
+674,San Marino
+678,Sao Tome and Principe
+457,Sarawak
+682,Saudi Arabia
+686,Senegal
+688,Serbia
+891,Serbia and Montenegro
+690,Seychelles
+694,Sierra Leone
+702,Singapore
+703,Slovakia
+705,Slovenia
+711,So. African Customs Union
+90,Solomon Isds
+706,Somalia
+710,South Africa
+239,South Georgia and the South Sandwich Islands
+728,South Sudan
+724,Spain
+839,Special Categories
+144,Sri Lanka
+275,State of Palestine
+729,Sudan
+740,Suriname
+748,Eswatini
+752,Sweden
+757,Switzerland
+760,Syria
+762,Tajikistan
+807,North Macedonia
+764,Thailand
+626,Timor-Leste
+768,Togo
+772,Tokelau
+776,Tonga
+780,Trinidad and Tobago
+788,Tunisia
+792,Turkey
+795,Turkmenistan
+796,Turks and Caicos Isds
+798,Tuvalu
+800,Uganda
+804,Ukraine
+784,United Arab Emirates
+826,United Kingdom
+834,United Rep. of Tanzania
+581,United States Minor Outlying Islands
+858,Uruguay
+849,US Misc. Pacific Isds
+850,US Virgin Isds
+842,USA
+841,USA (before 1981)
+860,Uzbekistan
+548,Vanuatu
+862,Venezuela
+704,Viet Nam
+876,Wallis and Futuna Isds
+879,"Western Asia, nes"
+732,Western Sahara
+887,Yemen
+894,Zambia
+716,Zimbabwe
