@@ -186,7 +186,3 @@ pagerank_colorbar = {
 
 ### Save the created image in *.png format
 To save the created image, hover your mouse over its upper right corner; a mode panel with a save icon will appear.
-
-# A detailed explanation of the code
-
-Can be found [in the notebook](Building_a_Network_Graph_of_Global_Trade.ipynb).
