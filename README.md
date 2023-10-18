@@ -3,7 +3,7 @@
 - key suppliers of each country and the countries for which it itself is a key supplier;
 - the direction of trade flows.
 
-# What does this graph represent?
+# What does the graph represent?
 
 <img src="./assets/Collage_of_3.jpg" width="100%">
 
