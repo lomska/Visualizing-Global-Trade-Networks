@@ -3,7 +3,7 @@
 - key suppliers of each country and the countries for which it itself is a key supplier;
 - the direction of trade flows.
 
-<img src="./demo_graphs/Collage.jpg" width="100%">
+<img src="./assets/Collage_of_3.jpg" width="100%">
 
 # Usage
 
