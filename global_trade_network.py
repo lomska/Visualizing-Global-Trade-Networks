@@ -5,7 +5,7 @@ import numpy as np
 import math
 
 import comtradeapicall
-import time
+import time    
 
 import pygraphviz as pgv
 
@@ -21,14 +21,14 @@ warnings.filterwarnings('ignore')
 
 # COMTRADE SUBSCRIPTION KEY *****************************************************
 
-subscription_key = "YOUR_SUBSCRIPTION_KEY"
+subscription_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 # CODES *************************************************************************
 
-commodities = pd.read_csv('harmonized-system.csv')
+commodities = pd.read_csv('comtrade_codes/harmonized-system.csv')
 
-reporters = pd.read_csv('reporterAreas.csv')
-partners = pd.read_csv('partnerAreas.csv')
+reporters = pd.read_csv('comtrade_codes/reporterAreas.csv')
+partners = pd.read_csv('comtrade_codes/partnerAreas.csv')
 
 # EXTRACTING THE DATA ***********************************************************
 
@@ -64,6 +64,12 @@ comtrade_imp = comtradeapicall.getFinalData(subscription_key,
 
 comtrade_imp = comtrade_imp[
     comtrade_imp['reporterCode'] != comtrade_imp['partnerCode']]
+
+# GRAPH PARAMETERS **************************************************************
+
+n_links = 2
+coloring_parameter = 'export_share' # other options: 'region' | 'pagerank'
+pic_width = 900
 
 # DATA PROCESSING ***************************************************************
 
@@ -209,8 +215,6 @@ df_links['supplier_rank_target'] = df_links.set_index(
     ['source', 'target']).index.map(supplier_rank_dict)
 
 # PYGRAPHVIZ LAYOUT *************************************************************
-
-n_links = 2
 
 df = df_links[
     (df_links['supplier_rank_source'].isin(list(np.arange(n_links + 1))[1:])) |
@@ -762,7 +766,6 @@ def create_colorbars(color_dict):
 
 # PLOTLY GRAPH CREATING FUNCTION ************************************************
 
-
 def colored_network(coloring_parameter, country_chosen, node_data, edge_data,
                     graph_width, graph_height):
 
@@ -823,7 +826,7 @@ def colored_network(coloring_parameter, country_chosen, node_data, edge_data,
             edge_data['link_color'], edge_data['country_chosen'])
     ]
 
-    coef = 900 / graph_width
+    coef = pic_width / graph_width
 
     fig = go.Figure()
 
@@ -979,5 +982,5 @@ colorscales_dict, colorbars_dict = create_colorbars(color_dict)
 
 # BUILDING THE GRAPH ************************************************************
 
-colored_network('export_share', np.nan, node_data, edge_data, graph_width,
+colored_network(coloring_parameter, np.nan, node_data, edge_data, graph_width,
                 graph_height).show()
