@@ -19,6 +19,8 @@ If you wish, **you can highlight one country with all its trading partners**.
 
 The process of creating a graph is described in maximum detail in [this notebook](https://nbviewer.org/github/lomska/global_trade_one_minute_viz/blob/main/Building_a_Network_Graph_of_Global_Trade.ipynb).
 
+More examples of graphs like the ones above can be found in [this folder](demo_graphs/).
+
 ## Interactive examples
 
 <a href="https://alcotradenets2022-d1f5de444d2b.herokuapp.com/" target="_blank"><img align="left" src="assets/dash_dashboard_l.jpg" alt="VIEW ON HEROKU" width="400" height="200" border="10" /></a>
