@@ -24,7 +24,7 @@ More examples of graphs like the ones above can be found in [this folder](demo_g
 ## Interactive examples
 
 <a href="https://alcotradenets2022-d1f5de444d2b.herokuapp.com/" target="_blank"><img align="left" src="assets/dash_dashboard_l.jpg" alt="VIEW ON HEROKU" width="400" height="200" border="10" /></a>
-Here's a small [hard alcohol trading demo dashboard](https://alcotradenets2022-d1f5de444d2b.herokuapp.com/) that shows how chart interactivity works. Toggle settings to change the color of networks and highlight individual countries (one of the top 10 traders can be highlighted for each drink). It may take 4-5 seconds for the chart to load and update.
+Here's a small [hard alcohol trading demo dashboard](https://alcotradenets2022-d1f5de444d2b.herokuapp.com/) that shows how chart interactivity works. Toggle settings to change the color of networks and highlight individual countries (one of the top 10 traders can be highlighted for each drink). **It may take 4-5 seconds for the chart to load and update**.
 <br><br><br><br>
 
 <a href="https://public.tableau.com/app/profile/lomska/viz/GlobalArtTradePathsIronQuest/arts_exports" target="_blank"><img align="left" src="assets/tableau_dashboard.png" alt="VIEW ON TABLEAU PUBLIC" width="400" height="225" border="10" /></a>
