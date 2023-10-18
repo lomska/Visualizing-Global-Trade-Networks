@@ -7,28 +7,28 @@
 
 <img src="./assets/Collage_of_3.jpg" width="100%">
 
-The network graph will connect each country/territory that traded the commodity you are interested in during the specified period with its leading (in US dollars) suppliers of the commodity. **You decide how many connections per country to show**. 
+The network graph will link each country/territory that traded the commodity of interest during the specified period to its leading (in US dollar) suppliers of the commodity. **You decide how many connections per country to show**.
 
-The size of the nodes is determined by the total trade volume of the product (imports + exports in US dollars). **The nodes are colored according to a parameter of your choice**: regions to which they belong, the number of their trade links, or the export/import balance of their trade. Above you see three examples of coloring: the nodes of the wine network are colored depending on the number of trade connections (most of all in France and Spain); Jewelry network nodes are colored by region; Blood network nodes are colored based on their export/import balances (Ireland is almost 100% exporter and China is almost 100% importer). 
+The size of the nodes is determined by the total trade volume of the product (imports + exports in US dollars). **Nodes are colored according to the parameter you choose**: the regions they belong to, the number of their trade links, or the export-import balance of their trade. Above you see three examples of coloring: the nodes of the wine network are colored depending on the number of trade connections (the most of them are in France and Spain); The nodes of the jewelry network are colored by region; Blood network nodes are colored based on their export/import balance (Ireland is almost 100% exporter and China is almost 100% importer).
 
-The tooltip for each node indicates its total value of exports, the total value of imports, the key suppliers of the product to the country, and the countries for which it itself is a key supplier.
+The tooltip for each node lists its total export value, total import value, key suppliers of the product to the country, and the countries for which it itself is a key supplier.
 
-The link between the two countries reflects the direction of the net trade flow between them (the difference in mutual exports). 
+The link between two countries reflects the direction of net trade flow between them (the difference in mutual exports)
 
 If you wish, **you can highlight one country with all its trading partners**. 
 
-The process of creating a graph is described in maximum detail in [this notebook](https://nbviewer.org/github/lomska/global_trade_one_minute_viz/blob/main/Building_a_Network_Graph_of_Global_Trade.ipynb).
+The process of creating a graph is described in as much detail as possible in [this notebook](https://nbviewer.org/github/lomska/global_trade_one_minute_viz/blob/main/Building_a_Network_Graph_of_Global_Trade.ipynb).
 
 More examples of graphs like the ones above can be found in [this folder](demo_graphs/).
 
 ## Interactive examples
 
 <a href="https://alcotradenets2022-d1f5de444d2b.herokuapp.com/" target="_blank"><img align="left" src="assets/dash_dashboard_l.jpg" alt="VIEW ON HEROKU" width="400" height="200" border="10" /></a>
-Here's a small [hard alcohol trading demo dashboard](https://alcotradenets2022-d1f5de444d2b.herokuapp.com/) that shows how chart interactivity works. Toggle settings to change the color of networks and highlight individual countries (one of the top 10 traders can be highlighted for each drink). **It may take 4-5 seconds for the chart to load and update**.
+Here's a small [hard alcohol trading demo dashboard](https://alcotradenets2022-d1f5de444d2b.herokuapp.com/) that shows how the chart interactivity works. Toggle settings to change the color of networks and highlight individual countries (one of the top 10 traders can be highlighted for each drink). **Chart may take 4-5 seconds to load and update**.
 <br><br><br><br><br>
 
 <a href="https://public.tableau.com/app/profile/lomska/viz/GlobalArtTradePathsIronQuest/arts_exports" target="_blank"><img align="left" src="assets/tableau_dashboard.png" alt="VIEW ON TABLEAU PUBLIC" width="400" height="225" border="10" /></a>
-This [Tableau dashboard](https://public.tableau.com/app/profile/lomska/viz/GlobalArtTradePathsIronQuest/arts_exports) showing global trade networks for different types of art is built using similar code. The nodes are colored according to the country's net trade status, whether it is an art exporter or an art importer.
+This [Tableau dashboard](https://public.tableau.com/app/profile/lomska/viz/GlobalArtTradePathsIronQuest/arts_exports), showing global trade networks for various types of art, is built using similar code. The nodes are colored according to a country's net trade status, whether it is an art exporter or an art importer.
 <br><br><br><br><br><br><br>
 
 # Usage
