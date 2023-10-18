@@ -1,4 +1,4 @@
-**What if you want to quickly get an idea of how international trade for a certain commodity is organized?** This code builds an international trading network for any product (or group of products) from the UN Comtrade database in an average of 40 seconds (however, this depends on the speed of the Comtrade API). The network graph will contain the following information: 
+**What if you want to quickly get an idea of how international trade for a certain commodity is organized?** This code builds an international trade network for any product (or group of products) from the UN Comtrade database in an average of 40 seconds (however, this depends on the speed of the Comtrade API). The network graph will contain the following information: 
 - value of each country's exports and imports;
 - key suppliers of each country and the countries for which it itself is a key supplier;
 - the direction of trade flows.
