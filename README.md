@@ -87,7 +87,7 @@ Each request is limited to 250 thousand records.
 n_links = 2
 ```
 
-The network connects each country/territory to its N largest (in US dollars) suppliers of a selected good. This is where you define N. The optimal number is between 1 and 3; more links tend to look too cluttered in most cases.
+The network connects each country/territory to its N largest (in US dollars) suppliers of a selected good. N_links determines how many links to draw. The optimal number is between 1 and 3; more links tend to look too cluttered in most cases.
 
 #### Coloring parameter 
 
