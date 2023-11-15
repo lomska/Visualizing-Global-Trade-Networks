@@ -1,9 +1,35 @@
-**What if you want to pick a product and quickly get an idea of how all international trade for that product is organized?** Using this code, you can build an international trading network for any product (or group of products) from the UN Comtrade database for the period of interest in an average of 40 seconds (however, this depends on the speed of the Comtrade API). The network graph will contain the following information:
+**What if you want to quickly get an idea of how international trade for a certain commodity is organized?** [This script](global_trade_network.py) builds an international trade network for any product (or group of products) from the UN Comtrade database in an average of 40 seconds (however, this depends on the speed of the Comtrade API). The network graph will contain the following information: 
 - value of each country's exports and imports;
 - key suppliers of each country and the countries for which it itself is a key supplier;
 - the direction of trade flows.
 
+# What does the graph represent?
+
 <img src="./assets/Collage_of_3.jpg" width="100%">
+
+The network graph will link each country/territory that traded the commodity of interest during the specified period to its leading (in US dollar) suppliers of the commodity. **You decide how many connections per country to show**.
+
+The size of the nodes is determined by the total trade volume of the product (imports + exports in US dollars). **Nodes are colored according to the parameter you choose**: the regions they belong to, the number of their trade links, or the export-import balance of their trade. Above you see three examples of coloring: the nodes of the wine network are colored depending on the number of trade connections (the most of them are in France and Spain); The nodes of the jewelry network are colored by region; Blood network nodes are colored based on their export/import balance (Ireland is almost 100% exporter and China is almost 100% importer).
+
+The tooltip for each node lists its total export value, total import value, key suppliers of the product to the country, and the countries for which it itself is a key supplier.
+
+The link between two countries reflects the direction of net trade flow between them (the difference in mutual exports)
+
+If you wish, **you can highlight one country with all its trading partners**. 
+
+The process of creating a graph is described in as much detail as possible in [this notebook](https://nbviewer.org/github/lomska/global_trade_one_minute_viz/blob/main/Building_a_Network_Graph_of_Global_Trade.ipynb).
+
+More examples of graphs like the ones above can be found in [this folder](demo_graphs/).
+
+## Interactive examples
+
+<a href="https://alcotradenets2022-d1f5de444d2b.herokuapp.com/" target="_blank"><img align="left" src="assets/dash_dashboard_l.jpg" alt="VIEW ON HEROKU" width="400" height="200" border="10" /></a>
+Here's a small [hard alcohol trading demo dashboard](https://alcotradenets2022-d1f5de444d2b.herokuapp.com/) that shows how the chart interactivity works. Toggle settings to change the color of networks and highlight individual countries (one of the top 10 traders can be highlighted for each drink). **Chart may take 4-5 seconds to load and update**.
+<br><br><br><br><br>
+
+<a href="https://public.tableau.com/app/profile/lomska/viz/GlobalArtTradePathsIronQuest/arts_exports" target="_blank"><img align="left" src="assets/tableau_dashboard.png" alt="VIEW ON TABLEAU PUBLIC" width="400" height="225" border="10" /></a>
+This [Tableau dashboard](https://public.tableau.com/app/profile/lomska/viz/GlobalArtTradePathsIronQuest/arts_exports), showing global trade networks for various types of art, is built using similar code. The nodes are colored according to a country's net trade status, whether it is an art exporter or an art importer.
+<br><br><br><br><br><br><br>
 
 # Usage
 
@@ -61,7 +87,7 @@ Each request is limited to 250 thousand records.
 n_links = 2
 ```
 
-The network connects each country/territory to its N largest (in US dollars) suppliers of a selected good. This is where you define N. The optimal number is between 1 and 3; more links tend to look too cluttered in most cases.
+The network connects each country/territory to its N largest (in US dollars) suppliers of a selected good. N_links determines how many links to draw. The optimal number is between 1 and 3; more links tend to look too cluttered in most cases.
 
 #### Coloring parameter 
 
@@ -160,7 +186,3 @@ pagerank_colorbar = {
 
 ### Save the created image in *.png format
 To save the created image, hover your mouse over its upper right corner; a mode panel with a save icon will appear.
-
-# A detailed explanation of the code
-
-Can be found [in the notebook](Building_a_Network_Graph_of_Global_Trade.ipynb).
