@@ -1,4 +1,4 @@
-**What if you want to quickly get an idea of how international trade for a certain commodity is organized?** [This script](global_trade_network.py) builds an international trade network for any product (or group of products) from the UN Comtrade database in an average of 40 seconds (however, this depends on the speed of the Comtrade API). The network graph will contain the following information: 
+**What if you want to quickly get an idea of how international trade for a certain commodity is organized?** This script builds an international trade network for any product (or group of products) from the UN Comtrade database in an average of 40 seconds (however, this depends on the speed of the Comtrade API). The network graph will contain the following information: 
 - value of each country's exports and imports;
 - key suppliers of each country and the countries for which it itself is a key supplier;
 - the direction of trade flows.
@@ -7,19 +7,15 @@
 
 <img src="./assets/Collage_of_3.jpg" width="100%">
 
-The network graph will link each country/territory that traded the commodity of interest during the specified period to its leading (in US dollar) suppliers of the commodity. **You decide how many connections per country to show**.
+The network graph will link each country/territory that traded the commodity of interest during the specified period to its leading (in US dollar) suppliers of the commodity. 
 
-The size of the nodes is determined by the total trade volume of the product (imports + exports in US dollars). **Nodes are colored according to the parameter you choose**: the regions they belong to, the number of their trade links, or the export-import balance of their trade. Above you see three examples of coloring: the nodes of the wine network are colored depending on the number of trade connections (the most of them are in France and Spain); The nodes of the jewelry network are colored by region; Blood network nodes are colored based on their export/import balance (Ireland is almost 100% exporter and China is almost 100% importer).
+The <b>size</b> of the nodes is determined by the total trade volume of the product (imports + exports in US dollars). Nodes are <b>colored</b> according to the selected parameter: the regions they belong to, the number of their trade links, or the export-import balance of their trade. The <b>tooltip</b> for each node lists its total export value, total import value, key suppliers of the product to the country, and the countries for which it itself is a key supplier. The <b>link</b> between two countries reflects the direction of net trade flow between them (the difference in mutual exports)
 
-The tooltip for each node lists its total export value, total import value, key suppliers of the product to the country, and the countries for which it itself is a key supplier.
+<b>You choose the coloring option, how many connections per country to display, and whether to highlight a specific country with all of its trading partners.</b>
 
-The link between two countries reflects the direction of net trade flow between them (the difference in mutual exports)
-
-If you wish, **you can highlight one country with all its trading partners**. 
-
-The process of creating a graph is described in as much detail as possible in [this notebook](https://nbviewer.org/github/lomska/global_trade_one_minute_viz/blob/main/Building_a_Network_Graph_of_Global_Trade.ipynb).
-
-More examples of graphs like the ones above can be found in [this folder](demo_graphs/).
+- The script itself is [here](global_trade_network.py).
+- The process of creating a graph is described in detail in [this notebook](https://nbviewer.org/github/lomska/global_trade_one_minute_viz/blob/main/Building_a_Network_Graph_of_Global_Trade.ipynb).
+- More static examples of graphs like the ones above can be found in [this folder](demo_graphs/README.md).
 
 ## Interactive examples
 
