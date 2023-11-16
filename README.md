@@ -21,12 +21,6 @@ The process of creating a graph is described in as much detail as possible in [t
 
 More examples of graphs like the ones above can be found in [this folder](demo_graphs/).
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
-
 ## Interactive examples
 
 <a href="https://alcotradenets2022-d1f5de444d2b.herokuapp.com/" target="_blank"><img align="left" src="assets/dash_dashboard_l.jpg" alt="VIEW ON HEROKU" width="400" height="200" border="10" /></a>
