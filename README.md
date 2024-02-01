@@ -5,7 +5,7 @@
 
 # What does the graph represent?
 
-<img src="./assets/Collage_of_3.jpg" width="100%">
+<img src="./assets/NetsBanner.png" width="100%">
 
 The network graph will link each country/territory that traded the commodity of interest during the specified period to its leading (in US dollar) suppliers of the commodity. 
 
