@@ -75,6 +75,7 @@ comtrade_imp = comtrade_imp[
 n_links = 2
 chosen_color_parameter = 'region' # 'export_share' 'pagerank'
 pic_width = 700
+output_pic_name = 'wheat_and_meslin'
 
 # DATA PROCESSING ***************************************************************
 
@@ -1060,7 +1061,7 @@ def get_image(get_png_clicks):
             'options': {
                 'bg': '#010103'
             },
-            'filename': f'wheat_and_meslin_{now}'
+            'filename': f'{output_pic_name}_{now}'
         }
 
 
