@@ -1,7 +1,6 @@
-**What if you want to quickly get an idea of how international trade for a certain commodity is organized?** This script builds an international trade network for any product (or group of products) from the UN Comtrade database in an average of 40 seconds (however, this depends on the speed of the Comtrade API). The network graph will contain the following information: 
-- value of each country's exports and imports;
-- key suppliers of each country and the countries for which it itself is a key supplier;
-- the direction of trade flows.
+**This script creates an interactive graph of the international trade network for any product (or group of products) from the UN Comtrade database.** This allows you to quickly gain insight into how international trade is organized for a particular product, identify trade links that countries have not reported, and identify countries and territories that have closed trade reporting or do not report trade at all.
+
+The created graph will be colored according to the option selected by the user; its nodes, when clicked, will display the name of the country and will be highlighted with all its trade connections. The network can be saved in *.png format.
 
 # What does the graph represent?
 
@@ -9,23 +8,16 @@
 
 The network graph will link each country/territory that traded the commodity of interest during the specified period to its leading (in US dollar) suppliers of the commodity. 
 
-The <b>size</b> of the nodes is determined by the total trade volume of the product (imports + exports in US dollars). Nodes are <b>colored</b> according to the selected parameter: the regions they belong to, the number of their trade links, or the export-import balance of their trade. The <b>tooltip</b> for each node lists its total export value, total import value, key suppliers of the product to the country, and the countries for which it itself is a key supplier. The <b>link</b> between two countries reflects the direction of net trade flow between them (the difference in mutual exports)
+The <b>size</b> of the nodes is determined by the total trade volume of the product (imports + exports in US dollars). Nodes are <b>colored</b> according to the selected parameter: the regions they belong to, the number of their trade links, or the export-import balance of their trade. The <b>link</b> between two countries reflects the direction of net trade flow between them (the difference in mutual exports)
 
 <b>You choose the coloring option, how many connections per country to display, and whether to highlight a specific country with all of its trading partners.</b>
 
-- The script itself is [here](global_trade_network.py).
-- The process of creating a graph is described in detail in [this notebook](https://nbviewer.org/github/lomska/global_trade_one_minute_viz/blob/main/Building_a_Network_Graph_of_Global_Trade.ipynb).
-- More static examples of graphs like the ones above can be found in [this folder](demo_graphs/README.md).
+The script itself is [here](global_trade_network.py). The process of creating a graph is described in detail in [this notebook](https://nbviewer.org/github/lomska/global_trade_one_minute_viz/blob/main/Building_a_Network_Graph_of_Global_Trade.ipynb).
 
-## Interactive examples
+## Usage examples
 
-<a href="https://alcotradenets2022-d1f5de444d2b.herokuapp.com/" target="_blank"><img align="left" src="assets/dash_dashboard_l.jpg" alt="VIEW ON HEROKU" width="400" height="200" border="10" /></a>
-Here's a small [hard alcohol trading demo dashboard](https://alcotradenets2022-d1f5de444d2b.herokuapp.com/) that shows how the chart interactivity works. Toggle settings to change the color of networks and highlight individual countries (one of the top 10 traders can be highlighted for each drink). **Chart may take 4-5 seconds to load and update**.
-<br><br><br><br><br>
-
-<a href="https://public.tableau.com/app/profile/lomska/viz/GlobalArtTradePathsIronQuest/arts_exports" target="_blank"><img align="left" src="assets/tableau_dashboard.png" alt="VIEW ON TABLEAU PUBLIC" width="400" height="225" border="10" /></a>
-This [Tableau dashboard](https://public.tableau.com/app/profile/lomska/viz/GlobalArtTradePathsIronQuest/arts_exports), showing global trade networks for various types of art, is built using similar code. The nodes are colored according to a country's net trade status, whether it is an art exporter or an art importer.
-<br><br><br><br><br><br><br>
+<a href="https://precious-trade-9495c0104c61.herokuapp.com/" target="_blank"><img align="left" src="assets/DashScreen.png" alt="VIEW ON HEROKU" width="100%"/></a>
+[This project](https://precious-trade-9495c0104c61.herokuapp.com/) provides a quick snapshot of international trade networks in precious stones, metals, and their products, including trade links not included in official country reports and non-reporting trade areas (those that have closed reporting, as well as free trade areas and bunkers).
 
 # Usage
 
@@ -38,7 +30,10 @@ You need to create a Comtrade B2C account, add a **comtrade - v1** API to your s
 - [Comtradeapicall](https://pypi.org/project/comtradeapicall/)
 - [PyGraphviz](https://pygraphviz.github.io/)
 - [Plotly](https://plotly.com/python/)
-- [Networkx](https://github.com/networkx/networkx) 
+- [Networkx](https://github.com/networkx/networkx)
+- [DASH](https://plotly.com/dash/)
+- [Dash Cytoscape](https://dash.plotly.com/cytoscape)
+- [Dash Bootstrap Components](https://dash-bootstrap-components.opensource.faculty.ai/)
 
 ## Adapt the code to your needs
 
@@ -108,77 +103,6 @@ pic_width = 900
 The proportion of width and height of a graph depends on its layout generated by PyGraphviz. After setting the width of the image, its height will be adjusted to maintain the proportions.
 
 ## Run code
-
-It takes about 40 seconds to complete.
-
-## What else can you do after plotting the graph?
-
-### Change the graph layout
-
-Just rerun the code starting from paragraph **# PYGRAPHVIZ LAYOUT**. PyGraphviz creates a new layout every time. Repeat until you get a layout you're happy with.
-
-### Change the coloring of the graph and/or highlight a specific country
-
-You can change the coloring parameter of the generated graph and/or highlight a specific country with all its trading partners by simply **using the color_network() function** with the appropriate parameters.
-
-```
-colored_network(
-“region”, # change your coloring_parameter here
-“USA”, # insert the particular country instead of np.nan to highlight it
-node_data, 
-edge_data, 
-graph_width,
-graph_height
-).show()
-```
-
-Get a list of all countries in your product network:
-```
-node_data[‘country’].sort_values().unique().tolist()
-```
-
-### Add annotations
-
-To add an annotation, you should **modify the color_network() function**: add the appropriate code snippet to the def color_network() module before fig.update_layout().
-
-```
-fig.add_annotation(
-        x=0.5, # x-coordinate
-        y=1.2, # y-coordinate
-        text="Global Trade Network 2022",
-        font = dict(family = 'Bitter', size = 17, color = '#ffffff'),
-        xref="paper",
-        yref="paper",
-        showarrow=False
-    )
-```
-
-[Learn more about annotations in Plotly](https://plotly.com/python/text-and-annotations/)
-
-### Move the legend/colorbar
-
-When you color by region, a legend is created in the graph. To change the position of the legend, **modify the color_network() function**:
-
-```
-fig.update_layout(...,
-                      legend=dict(...,
-                                  x=0.5, # x-coordinate 
-                                  y=1.025, # y-coordinate
-                                  …))
-```
-
-When coloring according to the export share or the number of links, a color bar is created in the graphic. To change its position, **modify the create_colorbars() function**:
-
-```
-pagerank_colorbar = {
-        'x': 0.5, # x-coordinate
-        'y': 0.99, # y-coordinate
-…}
-```
-
-[Learn more about Plotly legends](https://plotly.com/python/reference/layout/#layout-legend)
-
-[Learn more about Plotly colorbars](https://plotly.com/python/reference/layout/coloraxis/)
 
 ### Save the created image in *.png format
 To save the created image, hover your mouse over its upper right corner; a mode panel with a save icon will appear.
