@@ -17,7 +17,7 @@ The script itself is [here](global_trade_network.py). The process of creating a 
 ## Usage examples
 
 <a href="https://precious-trade-9495c0104c61.herokuapp.com/" target="_blank"><img align="left" src="assets/DashScreen.png" alt="VIEW ON HEROKU" width="100%"/></a>
-[This project](https://precious-trade-9495c0104c61.herokuapp.com/) provides a quick snapshot of international trade networks in precious stones, metals, and their products, including trade links not included in official country reports and non-reporting trade areas (those that have closed reporting, as well as free trade areas and bunkers).
+[This project](https://precious-trade-9495c0104c61.herokuapp.com/) presents nine international trade networks for precious stones, metals, and their products, with a choice of color options, a country search option, clickable node information, and detailed trading tables for each product.
 
 # Usage
 
